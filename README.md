@@ -1,3 +1,3 @@
-#Grid para la APP de EstiloDF
+# Grid para la APP de EstiloDF
 
-##Maqueta en Grid
+## Maqueta en Grid
