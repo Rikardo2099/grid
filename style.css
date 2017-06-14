@@ -14,8 +14,6 @@ body { overflow-x: hidden; }
 }
 /*****reset*****/
 .container {
-	border: medium solid #CCC;
-	background-color: steelblue;
 	width: 100%;
 	max-width: 768px;
 	margin: auto;
@@ -32,12 +30,16 @@ body { overflow-x: hidden; }
 						'footer footer';
 }
 header{
-	background-color: black;
 	grid-area: header;
-	padding: 2em;
+	padding: 1em;
 	text-align: center;
 	color: #fff;
 }
+header img{
+	width: 150px;
+	height: auto;
+}
+
 .nav {
 	background-color: lightsteelblue;
 	grid-area: nav;
@@ -59,20 +61,46 @@ header{
 }
 .close, .open {
   position: absolute;
-  top: 1rem;
+  top: .5rem;
   right: 1rem;
 }
 .publicidad{
-	background-color: deepskyblue;
+	background-color: #000;
 	grid-area: publicidad;
+	text-align: center;
+}
+.publicidad img{
+	width: 100%;
+	max-width: 300px;
 }
 .VideoPrincipal{
-	background-color: darkgrey;
 	grid-area: VideoPrincipal;
+	padding: 1.5rem;
+}
+.VideoPrincipal iframe{
+	width: 100%;
+	margin: auto;
 }
 .secciones{
-	background-color: dimgrey;
 	grid-area: secciones;
+}
+.secciones div.containerSecciones{
+	width: 100%;
+	max-width: 350px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(7, auto)
+}
+.secciones div.containerSecciones a figure {
+	border-top: thin solid #fff;
+	border-bottom: thin solid #fff;
+	padding: 0;
+}
+.secciones div.containerSecciones a figure img{
+	width: 100%;
+	max-width: 350px;
+	height: auto;
 }
 .edicionDigital{
 	background-color: dodgerblue;
@@ -90,6 +118,57 @@ footer{
 	background-color: dimgrey;
 	grid-area: footer;
 }
+
+/***** Fondos *****/
+
+.black{
+    background: rgba(51,51,51,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(51,51,51,1)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
+background: radial-gradient(ellipse at center, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000', GradientType=1 );
+}
+.news{
+    background-image: url(images/seccion-news.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.making{
+    background-image: url(images/seccion-makingof.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.abraza{
+    background-image: url(images/seccionabraza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.buencomer{
+    background-image: url(images/seccion-buencomer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fitness{
+    background-image: url(images/seccion-fitness.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.entrevista{
+    background-image: url(images/seccion-entrevista.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.belleza{
+    background-image: url(images/seccion-belleza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/***** Media Queries *****/
+
 @media screen and (min-width: 767px) {
 .nav {
 	display: none
