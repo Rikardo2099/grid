@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+@font-face{
+    font-family: bebas;
+    src: url(fonts/BebasNeueRegular.otf);
+}
+@font-face{
+    font-family: bebaslight;
+    src: url(fonts/BebasNeueLight.otf);
+}
+
 /*****reset*****/
 html {
 	box-sizing: border-box;
@@ -11,6 +20,12 @@ body { overflow-x: hidden; }
   box-sizing: inherit;
   padding: 0;
   margin: 0;
+}
+h1,h2,h3,h4,h5{
+	font-family: bebas;
+}
+.aux-100{
+	width: 100%;
 }
 /*****reset*****/
 .container {
@@ -40,12 +55,14 @@ header img{
 	height: auto;
 }
 
+/*****Estilos del Menu******/
 .nav {
 	background-color: lightsteelblue;
 	grid-area: nav;
 	position: fixed;
 	top: 0;
-	bottom: 0;
+	text-align: center;
+	height: auto;
 	width: 100%;
 	transition: transform .3s ease-in;
 	/*transform: translateX(-100%);*/
@@ -58,12 +75,39 @@ header img{
 .toggle {
   font-size: 2rem;
   text-decoration: none;
+  color: orangered;
 }
 .close, .open {
   position: absolute;
   top: .5rem;
   right: 1rem;
 }
+.Menu-listItem {
+	border-bottom: thin solid #f16522;
+	list-style-type: none;
+	text-align: center;
+}
+.Menu-item { 
+    border-top: thin solid #f16522;
+    font-size: 14px;
+}
+
+/*Estilos para los links (textos del menu)*/
+.Menu-link {
+	padding: .5rem;
+	display: block;
+	color: black;
+	transition: all .3s ease-out;
+	text-decoration: none;
+	background-color: #fff;
+}
+
+.Menu-link:hover {
+	background-color: #f16522;
+	color: #FFF;
+}
+/*****Estilos del Menu******/
+
 .publicidad{
 	background-color: #000;
 	grid-area: publicidad;
@@ -103,20 +147,57 @@ header img{
 	height: auto;
 }
 .edicionDigital{
-	background-color: dodgerblue;
 	grid-area: edicionDigital;
+	text-align: center;
+	border-top: thin solid #fff;
+	background-image: url(images/weekend.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .puntosDistribucion{
-	background-color: lightblue;
 	grid-area: puntosDistribucion;
+	text-align: center;
+	border-top: thin solid #fff;
+	background-image: url(images/distribucion.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+figure.weekend img{
+	max-width: 200px;
 }
 .revista{
-	background-color: lightgray;
 	grid-area: revista;
+}
+section.revista{
+	text-align: center;
+	padding: 1rem;
+}
+figure.portada img{
+	width: 100%;
+	padding: 1rem;
 }
 footer{
 	background-color: dimgrey;
 	grid-area: footer;
+}
+section.container-footer{
+    width: 50%;
+    max-width: 280px;
+    margin: auto;
+    padding: 10px 0 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.caption3{
+    width: 100%;
+    height: 70px;
+    background-color: #f16522;
+}
+.caption3 h2{
+    text-align: center;
+    color: #fff;
+    padding: 8px 15px;
+    line-height: 1.2em;
 }
 
 /***** Fondos *****/
@@ -130,6 +211,19 @@ background: -o-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(
 background: -ms-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
 background: radial-gradient(ellipse at center, rgba(51,51,51,1) 0%, rgba(0,0,0,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000', GradientType=1 );
+}
+.gradient{
+    background: rgba(0,0,0,0);
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(25%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+    width: 100%;
+    height: 180px;
+    top: 0;
 }
 .news{
     background-image: url(images/seccion-news.jpg);
